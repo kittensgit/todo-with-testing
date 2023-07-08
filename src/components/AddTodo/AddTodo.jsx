@@ -8,6 +8,13 @@ const AddTodo = ({ addTodo }) => {
         setValue(e.target.value)
     }
 
+    const handleEnterKey = (e) => {
+        if (e.key === 'Enter') {
+            addTodo(value)
+            setValue('')
+        }
+    }
+
     return (
         <div>
             <input
@@ -15,6 +22,7 @@ const AddTodo = ({ addTodo }) => {
                 placeholder='Enter task'
                 value={value}
                 onChange={onChangeValue}
+                onKeyDown={handleEnterKey} 
             />
             <button onClick={() => addTodo(value)}>add</button>
         </div>
