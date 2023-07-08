@@ -20,3 +20,8 @@
   width: 400px;
   justify-content: space-between;
 }
+
+.done-task {
+  text-decoration: line-through;
+  color: red;
+}
